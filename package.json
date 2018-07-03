@@ -1,0 +1,29 @@
+{
+  "name": "radiko_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "npm": "^6.1.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.2.4",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.11.1",
+    "webpack-bundle-tracker": "^0.3.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.3"
+  }
+}

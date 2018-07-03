@@ -1,0 +1,26 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rec Manager</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheet/index.css' %}">
+</head>
+<body>
+<div id="app">
+    <section class="header_container">
+        <div id="header_title"><a href="http://localhost:8000/">RecManager</a></div>
+        <ul>
+            <li class="header_menu" v-on:click="showmodal=true">reserve</li>
+        </ul>
+    </section>
+    <modal v-if="showmodal" v-on:close="showmodal=false">
+    <section class="content_container">
+        <router-view></router-view>
+    </section>
+</div>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+{% render_bundle 'main' %}
+</body>
+</html>
