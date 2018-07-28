@@ -13,7 +13,7 @@
                             <!--<input type="text" name="numbering" placeholder="numbering">-->
                             <!--<div id="every_check"><input type="checkbox" name="every" value="True" checked="checked">毎週録音</div>-->
                             <!--<input type="submit" name="submit" value="登録">-->
-                            <button v-on:click="sendReserve"></button>
+                            <button v-on:click="sendReserve">submit</button>
                         </form>
                         {{ station_id }}
                 </div>
@@ -59,7 +59,7 @@
                         this.$emit('close');
                 }).catch((error) => {
                         console.log(error);
-                        // エラーメッセージ出す
+                        //TODO: エラーメッセージ出す
                 });
 
             }

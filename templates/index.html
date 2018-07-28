@@ -15,9 +15,9 @@
             <li class="header_menu" v-on:click="showmodal=true">reserve</li>
         </ul>
     </section>
-    <modal v-if="showmodal" v-on:close="showmodal=false">
+    <modal v-if="showmodal" v-on:close="showmodal=false"></modal>
     <section class="content_container">
-        <router-view></router-view>
+        <time-table></time-table>
     </section>
 </div>
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
