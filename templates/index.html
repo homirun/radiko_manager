@@ -12,10 +12,11 @@
     <section class="header_container">
         <div id="header_title"><a href="http://localhost:8000/">RecManager</a></div>
         <ul>
-            <li class="header_menu" v-on:click="showmodal=true">reserve</li>
+            <li class="header_menu" @click="showmodal=true">予約</li>
+            <li class="header_menu">予約リスト</li>
         </ul>
     </section>
-    <modal v-if="showmodal" v-on:close="showmodal=false"></modal>
+    <modal v-if="showmodal" @close="showmodal=false"></modal>
     <section class="content_container">
         <time-table></time-table>
     </section>

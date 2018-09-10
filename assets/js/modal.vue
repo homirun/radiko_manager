@@ -27,12 +27,14 @@
     import Vue from "vue";
 
     export default {
-        data:{
-            station_id: "",
-            start_data: "",
-            start_time: "",
-            rec_time: 0,
-            title: "",
+        data:function(){
+            return {
+                station_id: "",
+                start_data: "",
+                start_time: "",
+                rec_time: 0,
+                title: "",
+            }
         },
         methods: {
             sendReserve(){
