@@ -16,10 +16,8 @@ class ReserveViewSet(viewsets.ModelViewSet):
 
     @action(methods=['POST'], detail=True)
     def set_reserve(self):
-        pass
+        print("post")
 
-
-# TODO: https://stackoverflow.com/questions/45532965/django-rest-framework-serializer-without-a-model <- modelLess views
 
 class TimeTableView(views.APIView):
 

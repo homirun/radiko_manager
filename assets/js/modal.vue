@@ -16,12 +16,14 @@
                             <button v-on:click="sendReserve">submit</button>
                         </form>
                         {{ station_id }}
+                        {{ start_data }}
+
+
                 </div>
             </div>
         </div>
     </transition>
 </template>
-
 <script>
     import axios from "axios";
     import Vue from "vue";
@@ -41,14 +43,16 @@
                 const request = axios.create({
                     baseURL: "http://localhost:8000/api",
                     headers: {
-                        "ContentType": "application/json",
+                        "Content-Type": "application/json",
                         "X-Requested-With": "XMLHttpRequest",
                     },
                     responseType: "json"
                 });
 
-                request.get(
-                    "/reserve",
+                console.log(this.station_id);
+
+                request.post(
+                    "/reserve/",
                     JSON.stringify({
                         "station_id": this.station_id,
                         "start_date": this.start_date,
@@ -56,12 +60,12 @@
                         "rec_time": this.rec_time,
                         "title": this.title,
                     })
-                ).then((response) => {
-                        console.log(response);
-                        this.$emit('close');
-                }).catch((error) => {
-                        console.log(error);
-                        //TODO: エラーメッセージ出す
+                ).then(function(response) {
+                    console.log(response);
+                    this.$emit('close');
+                }).catch(function(error) {
+                    console.log(error);
+                    //TODO: エラーメッセージ出す
                 });
 
             }

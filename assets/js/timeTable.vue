@@ -29,7 +29,6 @@
                 });
 
                 let res = "";
-                console.log("aaaaa");
                 request.get("/program/today?area_id=" + areaId).then((response) => {
                         this.parseResponse(response);
                         this.$emit('close');

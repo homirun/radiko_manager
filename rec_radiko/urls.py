@@ -4,7 +4,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register('reserve', views.ReserveViewSet)
-#router.register('timetables', views.TimeTableView, base_name="time-tables")
+# router.register('timetables', views.TimeTableView, base_name="time-tables")
 
 urlpatterns = [
     url('^', include(router.urls)),

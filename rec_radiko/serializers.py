@@ -6,9 +6,3 @@ class ReserveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reserve
         fields = '__all__'
-
-
-class TimeTableSerializer(serializers.ModelSerializer):
-    class Meta:
-        pass
-

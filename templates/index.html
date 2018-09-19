@@ -10,15 +10,15 @@
 <body>
 <div id="app">
     <section class="header_container">
-        <div id="header_title"><a href="http://localhost:8000/">RecManager</a></div>
+        <div id="header_title"><router-link to="/">RecManager</router-link></div>
         <ul>
             <li class="header_menu" @click="showmodal=true">予約</li>
-            <li class="header_menu">予約リスト</li>
+            <router-link to="/reserveCheck"><li class="header_menu">予約リスト</li></router-link>
         </ul>
     </section>
     <modal v-if="showmodal" @close="showmodal=false"></modal>
     <section class="content_container">
-        <time-table></time-table>
+        <router-view></router-view>
     </section>
 </div>
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
