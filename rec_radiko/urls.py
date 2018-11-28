@@ -8,5 +8,6 @@ router.register('reserve', views.ReserveViewSet)
 
 urlpatterns = [
     url('^', include(router.urls)),
-    url('timetables', views.TimeTableView.as_view(), name="timetables")
+    url('timetables', views.TimeTableView.as_view(), name="timetables"),
+    url('radio_dir_view', views.RadioDirView.as_view(), name="radio_dir_view")
 ]

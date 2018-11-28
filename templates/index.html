@@ -14,6 +14,7 @@
         <ul>
             <li class="header_menu" @click="showmodal=true">予約</li>
             <router-link to="/reserveCheck"><li class="header_menu">予約リスト</li></router-link>
+            <router-link to="/files"><li class="header_menu">ファイル一覧</li></router-link>
         </ul>
     </section>
     <modal v-if="showmodal" @close="showmodal=false"></modal>
