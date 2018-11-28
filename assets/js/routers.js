@@ -12,4 +12,8 @@ export default [
         path: '/reserveCheck',
         component: reserveCheck,
     },
+    {
+        path:'/files',
+        component: files,
+    },
 ]
