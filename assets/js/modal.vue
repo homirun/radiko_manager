@@ -15,9 +15,6 @@
                             <!--<input type="submit" name="submit" value="登録">-->
                             <button v-on:click="sendReserve">submit</button>
                         </form>
-                        {{ station_id }}
-                        {{ start_data }}
-
 
                 </div>
             </div>
@@ -32,9 +29,9 @@
         data:function(){
             return {
                 station_id: "",
-                start_data: "",
+                start_date: "",
                 start_time: "",
-                rec_time: 0,
+                rec_time: "",
                 title: "",
             }
         },
@@ -48,8 +45,6 @@
                     },
                     responseType: "json"
                 });
-
-                console.log(this.station_id);
 
                 request.post(
                     "/reserve/",
@@ -67,8 +62,7 @@
                     console.log(error);
                     //TODO: エラーメッセージ出す
                 });
-
-            }
+            },
         }
     }
 
